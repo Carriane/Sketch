@@ -17,13 +17,14 @@ function populateBoard(size) {
 
 }
 
-populateBoard(16);
+
 
 function changeSize(input) {
+    populateBoard(input);
     if (input >=2 && input <=100){
-        populateBoard(input);
+        document.querySelector('.error').style.display = "None"; 
     }else {
-        console.log("too many squares");
+        document.querySelector('.error').style.display = "flex";
     }
 
 }
@@ -59,4 +60,3 @@ document.querySelector('body').addEventListener('click', (e) => {
  }
 });
 
-document.body.style.backgroundColor = "black";
